@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://metallb.github.io/metallb
-    targetRevision: "0.14.4"
+    targetRevision: "0.14.5"
     chart: metallb
     helm:
       values: |
@@ -16,7 +16,7 @@ spec:
             - name: default
               protocol: layer2
               addresses:
-                - 172.18.0.2-172.18.0.5
+                - 172.18.0.0-172.18.0.1
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
